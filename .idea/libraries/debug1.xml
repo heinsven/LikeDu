@@ -1,0 +1,47 @@
+<component name="libraryTable">
+  <library name="debug1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/hcicloud_player-5.0_deb4c3136e6ba3243162217665a3d6370de42ead.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/open_sdk_r5756_lite_6d2f7fdb9858babf33c9e2d4e7f2e3d756d8f7c8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/converter-scalars-2.0.0-beta4_1af741606b8bf7f60a5fe87f8a5cef055b435a75.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/dagger-2.0.2_a03129f8b80ef162832c2b436fd6c5ef5198b1b2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/mta-sdk-1.6.2_37a361f96de1d859b982ab5c03631204c68f7933.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.squareup.leakcanary-leakcanary-android-1.5_77faae1a816b9371ed6c4e2b8996675873140693.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/converter-gson-2.0.0-beta4_2e9da3dab73890774b27df4fceda3516811beae8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/okio-1.8.0_925c8dac3e598afbf387fabecbd41b0c80056a68.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/io.reactivex-rxandroid-1.1.0_e504fafa8a48cf12ce944851cb23d491c3705cbd.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/commons-collections4-4.1_ba385050dac28efee5128d8fdd2622bdd85ce6b9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/instant-run-bootstrap_085489c7e050e247c8f9143609c648889b44cdd1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.4.0_fe07cd9389bd937c2a7aed66bdec6d49d70befb6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/leakcanary-watcher-1.5_13ecc8746f6ec0e50d154e6cbbc8048b8160d01e.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/gson-2.4_8b291953a49a9c7300282b2ac47ed569e33a4c14.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/internal_impl-23.4.0_a5607b09215b327f61d8cdb6361e10a0f854cd85.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/hcicloud-5.0_a55731a2df24429f1a55492a57fe3c8091b46924.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/instant-run_1aab782e74fc2ace8e5f013a4cd588a03ec8e0eb.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-23.4.0_8f4fe2e0d72a224bfffc99c12b9a489ddf14535d.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/okhttp-3.3.0_ca7842d19548fb7b6c9fd8684b3c5eefc4f34c07.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/epublib-core-latest_ab51f69e8b3943caeda12307d97d69156f55f56d.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/leakcanary-analyzer-1.5_891da200c431583a895fe4d89ceaa98e54562c94.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/eventbus-3.0.0_0a4c31d0aefd1c2235b8eb343727fffade942951.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/tagsoup-1.2.1_443db02cc702c7cba20ec55665218a543681e48e.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-23.4.0_d87cffe5bddb88a568e1e715f871d6f58424e63c.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/main_016840447285352f29d755166c5ce780ce77dc9a.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/support-annotations-23.4.0_0f389b1a46d22732147dec23d8c5eb3de5268002.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/glide-3.7.0_98b0bbbdde7916bd84e5855d06fe8a66b6376f0d.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/butterknife-7.0.1_cf8e8c45993f4b1071d8c0e146385ab149333311.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.commit451-PhotoView-1.2.4_09e5a420b44f963e849527c39631387c967fcddd.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/adapter-rxjava-2.0.1_1a2d69d2f9d87f48f7ced15cc4923338d6507a84.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/slf4j-android-1.5.8_dd312381c73bb7c90f4c308555776e5ffaf80c52.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/rxjava-1.1.5_0efb0fb537d4df57fa254995d01252af11186855.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.4.0_358dcbc21d1a28c4e5dc6dcbef2e87abfd167f04.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-design-23.4.0_2f39d406e253bf9778b07b845c2478bf23b7afdf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.4.0_a95d08c3f976d6cbf557c905bbfa7445a2b4e5a3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/haha-2.0.3_9503442e640c3802cbd4b89d754fcfa663c39516.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/javax.inject-1_d4c8e36b523b03deaf9b31d0374c20cba52902ff.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.4.0_f9894439f86c7b6cdcd45eb0ce6d445970bc9e07.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/retrofit-2.1.0_bd6512ff537d7b41da3609393c924296bab7b6c1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

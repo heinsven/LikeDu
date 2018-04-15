@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="libs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/open_sdk_r5756_lite.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/libs/epublib-core-latest.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/libs/hcicloud-5.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/libs/hcicloud_player-5.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/libs/mta-sdk-1.6.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/libs/commons-collections4-4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/libs/slf4j-android-1.5.8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

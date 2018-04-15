@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="debug">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/jniLibs/debug/open_sdk_r5756_lite.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/jniLibs/debug/hcicloud-5.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/jniLibs/debug/commons-collections4-4.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/jniLibs/debug/mta-sdk-1.6.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/jniLibs/debug/epublib-core-latest.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/jniLibs/debug/hcicloud_player-5.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/jniLibs/debug/slf4j-android-1.5.8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
