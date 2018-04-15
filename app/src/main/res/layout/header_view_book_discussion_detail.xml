@@ -73,7 +73,7 @@
         android:textColor="@color/common_h1"
         android:textSize="16dp" />
 
-    <com.justwayward.reader.view.BookContentTextView
+    <com.cuit.likedu.view.BookContentTextView
         android:id="@+id/tvContent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

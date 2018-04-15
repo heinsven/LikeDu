@@ -1,20 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><!--
-  ~ Copyright (c) 2016 JustWayward Team
-  ~
-  ~ Licensed under the Apache License, Version 2.0 (the "License");
-  ~ you may not use this file except in compliance with the License.
-  ~ You may obtain a copy of the License at
-  ~
-  ~     http://www.apache.org/licenses/LICENSE-2.0
-  ~
-  ~ Unless required by applicable law or agreed to in writing, software
-  ~ distributed under the License is distributed on an "AS IS" BASIS,
-  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  ~ See the License for the specific language governing permissions and
-  ~ limitations under the License.
--->
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.justwayward.reader">
+    package="com.cuit.likedu">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -28,14 +14,14 @@
     <uses-permission android:name="android.permission.GET_TASKS" />
 
     <application
-        android:name=".ReaderApplication"
+        android:name="com.cuit.likedu.ReaderApplication"
         android:allowBackup="true"
         android:icon="@mipmap/icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity
-            android:name=".ui.activity.SplashActivity"
+            android:name="com.cuit.likedu.ui.activity.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar.FullScreen">
             <intent-filter>
@@ -45,22 +31,22 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.activity.MainActivity"
+            android:name="com.cuit.likedu.ui.activity.MainActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.SearchActivity"
+            android:name="com.cuit.likedu.ui.activity.SearchActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.SearchByAuthorActivity"
+            android:name="com.cuit.likedu.ui.activity.SearchByAuthorActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.BookDetailActivity"
+            android:name="com.cuit.likedu.ui.activity.BookDetailActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.BooksByTagActivity"
+            android:name="com.cuit.likedu.ui.activity.BooksByTagActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.ReadActivity"
+            android:name="com.cuit.likedu.ui.activity.ReadActivity"
             android:hardwareAccelerated="false"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar.FullScreen">
@@ -73,9 +59,9 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.activity.BookSourceActivity"
+            android:name="com.cuit.likedu.ui.activity.BookSourceActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".ui.activity.ReadPDFActivity">
+        <activity android:name="com.cuit.likedu.ui.activity.ReadPDFActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -84,7 +70,7 @@
                 <data android:mimeType="application/pdf" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activity.ReadEPubActivity">
+        <activity android:name="com.cuit.likedu.ui.activity.ReadEPubActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -93,7 +79,7 @@
                 <data android:mimeType="application/epub+zip" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.activity.ReadCHMActivity">
+        <activity android:name="com.cuit.likedu.ui.activity.ReadCHMActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -103,67 +89,67 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.activity.TopCategoryListActivity"
+            android:name="com.cuit.likedu.ui.activity.TopCategoryListActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.SubCategoryListActivity"
+            android:name="com.cuit.likedu.ui.activity.SubCategoryListActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.SubjectBookListActivity"
+            android:name="com.cuit.likedu.ui.activity.SubjectBookListActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.SubjectBookListDetailActivity"
+            android:name="com.cuit.likedu.ui.activity.SubjectBookListDetailActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.TopRankActivity"
+            android:name="com.cuit.likedu.ui.activity.TopRankActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.SubRankActivity"
+            android:name="com.cuit.likedu.ui.activity.SubRankActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.SubOtherHomeRankActivity"
+            android:name="com.cuit.likedu.ui.activity.SubOtherHomeRankActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.BookDiscussionActivity"
+            android:name="com.cuit.likedu.ui.activity.BookDiscussionActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.BookReviewActivity"
+            android:name="com.cuit.likedu.ui.activity.BookReviewActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.BookHelpActivity"
+            android:name="com.cuit.likedu.ui.activity.BookHelpActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.BookDiscussionDetailActivity"
+            android:name="com.cuit.likedu.ui.activity.BookDiscussionDetailActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.BookReviewDetailActivity"
+            android:name="com.cuit.likedu.ui.activity.BookReviewDetailActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.BookHelpDetailActivity"
+            android:name="com.cuit.likedu.ui.activity.BookHelpDetailActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.BookDetailCommunityActivity"
+            android:name="com.cuit.likedu.ui.activity.BookDetailCommunityActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.GirlBookDiscussionActivity"
+            android:name="com.cuit.likedu.ui.activity.GirlBookDiscussionActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.MyBookListActivity"
+            android:name="com.cuit.likedu.ui.activity.MyBookListActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.SettingActivity"
+            android:name="com.cuit.likedu.ui.activity.SettingActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.ScanLocalBookActivity"
+            android:name="com.cuit.likedu.ui.activity.ScanLocalBookActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.WifiBookActivity"
+            android:name="com.cuit.likedu.ui.activity.WifiBookActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.activity.FeedbackActivity"
+            android:name="com.cuit.likedu.ui.activity.FeedbackActivity"
             android:screenOrientation="portrait" />
 
-        <service android:name=".service.DownloadBookService" />
+        <service android:name="com.cuit.likedu.service.DownloadBookService" />
 
         <activity
             android:name="com.tencent.tauth.AuthActivity"

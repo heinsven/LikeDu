@@ -4,13 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.justwayward.reader.view.epubview.ObservableWebView
+    <com.cuit.likedu.view.epubview.ObservableWebView
         android:id="@+id/contentWebView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="5dp" />
 
-    <com.justwayward.reader.view.epubview.VerticalSeekbar
+    <com.cuit.likedu.view.epubview.VerticalSeekbar
         android:id="@+id/scrollSeekbar"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"

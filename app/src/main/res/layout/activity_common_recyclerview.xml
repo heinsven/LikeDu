@@ -24,7 +24,7 @@
 
     <include layout="@layout/common_toolbar"/>
 
-    <com.justwayward.reader.view.recyclerview.EasyRecyclerView
+    <com.cuit.likedu.view.recyclerview.EasyRecyclerView
         android:id="@+id/recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
