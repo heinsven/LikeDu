@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 项目地址：[https://github.com/JustWayward/BookReader](https://github.com/JustWayward/BookReader)
 
 # BookReader
@@ -76,3 +77,6 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ```
+=======
+# Likedu3
+>>>>>>> 5befc58eda63fd59ee9aee42a0d3f6c182aedc87

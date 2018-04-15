@@ -2,9 +2,25 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/BookReader.iml" filepath="$PROJECT_DIR$/BookReader.iml" />
-      <module fileurl="file://$PROJECT_DIR$/EasyAdapterLibrary/EasyAdapterLibrary.iml" filepath="$PROJECT_DIR$/EasyAdapterLibrary/EasyAdapterLibrary.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/io.reactivex/rxandroid/1.1.0/1.1.0.iml" filepath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/io.reactivex/rxandroid/1.1.0/1.1.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.commit451/PhotoView/1.2.4/1.2.4.iml" filepath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.commit451/PhotoView/1.2.4/1.2.4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.5/1.5.iml" filepath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.squareup.leakcanary/leakcanary-android/1.5/1.5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EasyAdapterLibrary/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.0.1/23.0.1.iml" filepath="$PROJECT_DIR$/EasyAdapterLibrary/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.0.1/23.0.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EasyAdapterLibrary/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/23.4.0.iml" filepath="$PROJECT_DIR$/EasyAdapterLibrary/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.4.0/23.4.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EasyAdapterLibrary/build/generated/source/r/androidTest/androidTest.iml" filepath="$PROJECT_DIR$/EasyAdapterLibrary/build/generated/source/r/androidTest/androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/build/generated/source/buildConfig/androidTest/androidTest1.iml" filepath="$PROJECT_DIR$/app/build/generated/source/buildConfig/androidTest/androidTest1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EasyAdapterLibrary/build/generated/source/buildConfig/androidTest/androidTest2.iml" filepath="$PROJECT_DIR$/EasyAdapterLibrary/build/generated/source/buildConfig/androidTest/androidTest2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/build/generated/source/apt/apt.iml" filepath="$PROJECT_DIR$/app/build/generated/source/apt/apt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EasyAdapterLibrary/build/generated/source/buildConfig/buildConfig.iml" filepath="$PROJECT_DIR$/EasyAdapterLibrary/build/generated/source/buildConfig/buildConfig.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/build/generated/source/buildConfig/buildConfig1.iml" filepath="$PROJECT_DIR$/app/build/generated/source/buildConfig/buildConfig1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EasyAdapterLibrary/build/intermediates/manifest/androidTest/debug/debug.iml" filepath="$PROJECT_DIR$/EasyAdapterLibrary/build/intermediates/manifest/androidTest/debug/debug.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/build/intermediates/bundles/debug/instant-run/instant-run.iml" filepath="$PROJECT_DIR$/app/build/intermediates/bundles/debug/instant-run/instant-run.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EasyAdapterLibrary/src/main/main.iml" filepath="$PROJECT_DIR$/EasyAdapterLibrary/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/src/main/main1.iml" filepath="$PROJECT_DIR$/app/src/main/main1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/build/generated/source/r/r.iml" filepath="$PROJECT_DIR$/app/build/generated/source/r/r.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EasyAdapterLibrary/build/generated/source/r/r1.iml" filepath="$PROJECT_DIR$/EasyAdapterLibrary/build/generated/source/r/r1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EasyAdapterLibrary/build/intermediates/bundles/release/release.iml" filepath="$PROJECT_DIR$/EasyAdapterLibrary/build/intermediates/bundles/release/release.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/BookReader/EasyAdapterLibrary/unspecified/unspecified.iml" filepath="$PROJECT_DIR$/app/build/intermediates/exploded-aar/BookReader/EasyAdapterLibrary/unspecified/unspecified.iml" />
     </modules>
   </component>
 </project>
