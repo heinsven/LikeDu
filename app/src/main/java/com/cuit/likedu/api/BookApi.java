@@ -3,8 +3,6 @@ package com.cuit.likedu.api;
 import com.cuit.likedu.base.Constant;
 import com.cuit.likedu.bean.AutoComplete;
 import com.cuit.likedu.bean.BookDetail;
-import com.cuit.likedu.bean.BookHelp;
-import com.cuit.likedu.bean.BookHelpList;
 import com.cuit.likedu.bean.BookListDetail;
 import com.cuit.likedu.bean.BookListTags;
 import com.cuit.likedu.bean.BookLists;
@@ -27,8 +25,6 @@ import com.cuit.likedu.bean.Rankings;
 import com.cuit.likedu.bean.Recommend;
 import com.cuit.likedu.bean.RecommendBookList;
 import com.cuit.likedu.bean.SearchDetail;
-import com.cuit.likedu.bean.user.Login;
-import com.cuit.likedu.bean.user.LoginReq;
 
 import java.util.List;
 
@@ -169,21 +165,6 @@ public class BookApi {
         return service.getBookReviewComments(bookReviewId, start, limit);
     }
 
-    public Observable<BookHelpList> getBookHelpList(String duration, String sort, String start, String limit, String distillate) {
-        return service.getBookHelpList(duration, sort, start, limit, distillate);
-    }
-
-    public Observable<BookHelp> getBookHelpDetail(String helpId) {
-        return service.getBookHelpDetail(helpId);
-    }
-
-    public Observable<Login> login(String platform_uid, String platform_token, String platform_code) {
-        LoginReq loginReq = new LoginReq();
-        loginReq.platform_code = platform_code;
-        loginReq.platform_token = platform_token;
-        loginReq.platform_uid = platform_uid;
-        return service.login(loginReq);
-    }
 
     public Observable<DiscussionList> getBookDetailDisscussionList(String book, String sort, String type, String start, String limit) {
         return service.getBookDetailDisscussionList(book, sort, type, start, limit);
@@ -191,10 +172,6 @@ public class BookApi {
 
     public Observable<HotReview> getBookDetailReviewList(String book, String sort, String start, String limit) {
         return service.getBookDetailReviewList(book, sort, start, limit);
-    }
-
-    public Observable<DiscussionList> getGirlBookDisscussionList(String block, String duration, String sort, String type, String start, String limit, String distillate) {
-        return service.getBookDisscussionList(block, duration, sort, type, start, limit, distillate);
     }
 
 }

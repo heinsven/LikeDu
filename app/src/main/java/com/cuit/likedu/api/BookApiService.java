@@ -2,7 +2,6 @@ package com.cuit.likedu.api;
 
 import com.cuit.likedu.bean.AutoComplete;
 import com.cuit.likedu.bean.BookDetail;
-import com.cuit.likedu.bean.BookHelpList;
 import com.cuit.likedu.bean.BookListDetail;
 import com.cuit.likedu.bean.BookListTags;
 import com.cuit.likedu.bean.BookLists;
@@ -19,24 +18,18 @@ import com.cuit.likedu.bean.ChapterRead;
 import com.cuit.likedu.bean.CommentList;
 import com.cuit.likedu.bean.DiscussionList;
 import com.cuit.likedu.bean.Disscussion;
-import com.cuit.likedu.bean.BookHelp;
 import com.cuit.likedu.bean.HotReview;
 import com.cuit.likedu.bean.HotWord;
-import com.cuit.likedu.bean.user.Following;
-import com.cuit.likedu.bean.user.Login;
 import com.cuit.likedu.bean.PostCount;
 import com.cuit.likedu.bean.RankingList;
 import com.cuit.likedu.bean.Rankings;
 import com.cuit.likedu.bean.Recommend;
 import com.cuit.likedu.bean.RecommendBookList;
 import com.cuit.likedu.bean.SearchDetail;
-import com.cuit.likedu.bean.user.LoginReq;
 
 import java.util.List;
 
-import retrofit2.http.Body;
 import retrofit2.http.GET;
-import retrofit2.http.POST;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
 import rx.Observable;
@@ -297,46 +290,6 @@ public interface BookApiService {
      */
     @GET("/post/review/{bookReviewId}/comment")
     Observable<CommentList> getBookReviewComments(@Path("bookReviewId") String bookReviewId, @Query("start") String start, @Query("limit") String limit);
-
-    /**
-     * 获取书荒区帖子列表
-     * 全部、默认排序  http://api.zhuishushenqi.com/post/help?duration=all&sort=updated&start=0&limit=20&distillate=
-     * 精品、默认排序  http://api.zhuishushenqi.com/post/help?duration=all&sort=updated&start=0&limit=20&distillate=true
-     *
-     * @param duration   all
-     * @param sort       updated(默认排序)
-     *                   created(最新发布)
-     *                   comment-count(最多评论)
-     * @param start      0
-     * @param limit      20
-     * @param distillate true(精品) 、空字符（全部）
-     * @return
-     */
-    @GET("/post/help")
-    Observable<BookHelpList> getBookHelpList(@Query("duration") String duration, @Query("sort") String sort, @Query("start") String start, @Query("limit") String limit, @Query("distillate") String distillate);
-
-    /**
-     * 获取书荒区帖子详情
-     *
-     * @param helpId->_id
-     * @return
-     */
-    @GET("/post/help/{helpId}")
-    Observable<BookHelp> getBookHelpDetail(@Path("helpId") String helpId);
-
-    /**
-     * 第三方登陆
-     *
-     * @param platform_uid
-     * @param platform_token
-     * @param platform_code  “QQ”
-     * @return
-     */
-    @POST("/user/login")
-    Observable<Login> login(@Body LoginReq loginReq);
-
-    @GET("/user/followings/{userid}")
-    Observable<Following> getFollowings(@Path("userid") String userId);
 
     /**
      * 获取书籍详情讨论列表

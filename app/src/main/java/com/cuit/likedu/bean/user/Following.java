@@ -19,10 +19,6 @@ import com.cuit.likedu.bean.base.Base;
 
 import java.util.List;
 
-/**
- * @author yuyh.
- * @date 16/9/4.
- */
 public class Following extends Base {
 
 
