@@ -3,9 +3,6 @@ package com.cuit.likedu.api;
 import com.cuit.likedu.base.Constant;
 import com.cuit.likedu.bean.AutoComplete;
 import com.cuit.likedu.bean.BookDetail;
-import com.cuit.likedu.bean.BookListDetail;
-import com.cuit.likedu.bean.BookListTags;
-import com.cuit.likedu.bean.BookLists;
 import com.cuit.likedu.bean.BookMixAToc;
 import com.cuit.likedu.bean.BookReview;
 import com.cuit.likedu.bean.BookReviewList;
@@ -23,7 +20,6 @@ import com.cuit.likedu.bean.HotWord;
 import com.cuit.likedu.bean.RankingList;
 import com.cuit.likedu.bean.Rankings;
 import com.cuit.likedu.bean.Recommend;
-import com.cuit.likedu.bean.RecommendBookList;
 import com.cuit.likedu.bean.SearchDetail;
 
 import java.util.List;
@@ -85,9 +81,6 @@ public class BookApi {
         return service.getHotReview(book);
     }
 
-    public Observable<RecommendBookList> getRecommendBookList(String bookId, String limit) {
-        return service.getRecommendBookList(bookId, limit);
-    }
 
     public Observable<BooksByTag> getBooksByTag(String tags, String start, String limit) {
         return service.getBooksByTag(tags, start, limit);
@@ -111,18 +104,6 @@ public class BookApi {
 
     public Observable<Rankings> getRanking(String rankingId) {
         return service.getRanking(rankingId);
-    }
-
-    public Observable<BookLists> getBookLists(String duration, String sort, String start, String limit, String tag, String gender) {
-        return service.getBookLists(duration, sort, start, limit, tag, gender);
-    }
-
-    public Observable<BookListTags> getBookListTags() {
-        return service.getBookListTags();
-    }
-
-    public Observable<BookListDetail> getBookListDetail(String bookListId) {
-        return service.getBookListDetail(bookListId);
     }
 
     public synchronized Observable<CategoryList> getCategoryList() {

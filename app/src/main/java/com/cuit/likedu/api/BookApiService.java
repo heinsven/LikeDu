@@ -2,9 +2,6 @@ package com.cuit.likedu.api;
 
 import com.cuit.likedu.bean.AutoComplete;
 import com.cuit.likedu.bean.BookDetail;
-import com.cuit.likedu.bean.BookListDetail;
-import com.cuit.likedu.bean.BookListTags;
-import com.cuit.likedu.bean.BookLists;
 import com.cuit.likedu.bean.BookMixAToc;
 import com.cuit.likedu.bean.BookRead;
 import com.cuit.likedu.bean.BookReview;
@@ -24,7 +21,6 @@ import com.cuit.likedu.bean.PostCount;
 import com.cuit.likedu.bean.RankingList;
 import com.cuit.likedu.bean.Rankings;
 import com.cuit.likedu.bean.Recommend;
-import com.cuit.likedu.bean.RecommendBookList;
 import com.cuit.likedu.bean.SearchDetail;
 
 import java.util.List;
@@ -115,9 +111,6 @@ public interface BookApiService {
     @GET("/post/review/best-by-book")
     Observable<HotReview> getHotReview(@Query("book") String book);
 
-    @GET("/book-list/{bookId}/recommend")
-    Observable<RecommendBookList> getRecommendBookList(@Path("bookId") String bookId, @Query("limit") String limit);
-
     @GET("/book/{bookId}")
     Observable<BookDetail> getBookDetail(@Path("bookId") String bookId);
 
@@ -143,35 +136,6 @@ public interface BookApiService {
     @GET("/ranking/{rankingId}")
     Observable<Rankings> getRanking(@Path("rankingId") String rankingId);
 
-    /**
-     * 获取主题书单列表
-     * 本周最热：duration=last-seven-days&sort=collectorCount
-     * 最新发布：duration=all&sort=created
-     * 最多收藏：duration=all&sort=collectorCount
-     *
-     * @param tag    都市、古代、架空、重生、玄幻、网游
-     * @param gender male、female
-     * @param limit  20
-     * @return
-     */
-    @GET("/book-list")
-    Observable<BookLists> getBookLists(@Query("duration") String duration, @Query("sort") String sort, @Query("start") String start, @Query("limit") String limit, @Query("tag") String tag, @Query("gender") String gender);
-
-    /**
-     * 获取主题书单标签列表
-     *
-     * @return
-     */
-    @GET("/book-list/tagType")
-    Observable<BookListTags> getBookListTags();
-
-    /**
-     * 获取书单详情
-     *
-     * @return
-     */
-    @GET("/book-list/{bookListId}")
-    Observable<BookListDetail> getBookListDetail(@Path("bookListId") String bookListId);
 
     /**
      * 获取分类
@@ -322,6 +286,4 @@ public interface BookApiService {
     @GET("/post/review/by-book")
     Observable<HotReview> getBookDetailReviewList(@Query("book") String book, @Query("sort") String sort, @Query("start") String start, @Query("limit") String limit);
 
-    @GET("/post/original")
-    Observable<DiscussionList> getBookOriginalList(@Query("block") String block, @Query("duration") String duration, @Query("sort") String sort, @Query("type") String type, @Query("start") String start, @Query("limit") String limit, @Query("distillate") String distillate);
 }

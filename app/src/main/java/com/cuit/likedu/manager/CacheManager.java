@@ -1,26 +1,8 @@
-/**
- * Copyright 2016 JustWayward Team
- * <p/>
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * <p/>
- * http://www.apache.org/licenses/LICENSE-2.0
- * <p/>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package com.cuit.likedu.manager;
 
 import android.content.Context;
-import android.text.TextUtils;
 
-import com.cuit.likedu.ReaderApplication;
 import com.cuit.likedu.base.Constant;
-import com.cuit.likedu.bean.BookLists;
 import com.cuit.likedu.bean.BookMixAToc;
 import com.cuit.likedu.bean.ChapterRead;
 import com.cuit.likedu.utils.ACache;
@@ -29,17 +11,10 @@ import com.cuit.likedu.utils.FileUtils;
 import com.cuit.likedu.utils.LogUtils;
 import com.cuit.likedu.utils.SharedPreferencesUtil;
 import com.cuit.likedu.utils.StringUtils;
-import com.cuit.likedu.utils.ToastUtils;
 
 import java.io.File;
-import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author yuyh.
- * @date 2016/9/28.
- */
 public class CacheManager {
 
     private static CacheManager manager;
@@ -60,54 +35,7 @@ public class CacheManager {
         return "searchHistory";
     }
 
-    /**
-     * 获取我收藏的书单列表
-     *
-     * @return
-     */
-    public List<BookLists.BookListsBean> getCollectionList() {
-        List<BookLists.BookListsBean> list = (ArrayList<BookLists.BookListsBean>) ACache.get(
-                ReaderApplication.getsInstance()).getAsObject(getCollectionKey());
-        return list == null ? null : list;
-    }
 
-    public void removeCollection(String bookListId) {
-        List<BookLists.BookListsBean> list = getCollectionList();
-        if (list == null) {
-            return;
-        }
-        for (BookLists.BookListsBean bean : list) {
-            if (bean != null) {
-                if (TextUtils.equals(bean._id, bookListId)) {
-                    list.remove(bean);
-                    ACache.get(ReaderApplication.getsInstance()).put(getCollectionKey(), (Serializable) list);
-                    break;
-                }
-            }
-        }
-    }
-
-    public void addCollection(BookLists.BookListsBean bean) {
-        List<BookLists.BookListsBean> list = getCollectionList();
-        if (list == null) {
-            list = new ArrayList<>();
-        }
-        for (BookLists.BookListsBean data : list) {
-            if (data != null) {
-                if (TextUtils.equals(data._id, bean._id)) {
-                    ToastUtils.showToast("已经收藏过啦");
-                    return;
-                }
-            }
-        }
-        list.add(bean);
-        ACache.get(ReaderApplication.getsInstance()).put(getCollectionKey(), (Serializable) list);
-        ToastUtils.showToast("收藏成功");
-    }
-
-    private String getCollectionKey() {
-        return "my_book_lists";
-    }
 
     /**
      * 获取目录缓存

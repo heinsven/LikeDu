@@ -6,9 +6,7 @@ import com.cuit.likedu.api.BookApi;
 import com.cuit.likedu.base.RxPresenter;
 import com.cuit.likedu.bean.BookDetail;
 import com.cuit.likedu.bean.HotReview;
-import com.cuit.likedu.bean.RecommendBookList;
 import com.cuit.likedu.ui.contract.BookDetailContract;
-import com.cuit.likedu.utils.LogUtils;
 
 import java.util.List;
 
@@ -72,32 +70,6 @@ public class BookDetailPresenter extends RxPresenter<BookDetailContract.View> im
 
                     @Override
                     public void onError(Throwable e) {
-                    }
-                });
-        addSubscrebe(rxSubscription);
-    }
-
-    @Override
-    public void getRecommendBookList(String bookId, String limit) {
-        Subscription rxSubscription = bookApi.getRecommendBookList(bookId, limit).subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Observer<RecommendBookList>() {
-                    @Override
-                    public void onNext(RecommendBookList data) {
-                        LogUtils.i(data.booklists);
-                        List<RecommendBookList.RecommendBook> list = data.booklists;
-                        if (list != null && !list.isEmpty() && mView != null) {
-                            mView.showRecommendBookList(list);
-                        }
-                    }
-
-                    @Override
-                    public void onCompleted() {
-                    }
-
-                    @Override
-                    public void onError(Throwable e) {
-                        LogUtils.e("+++" + e.toString());
                     }
                 });
         addSubscrebe(rxSubscription);
