@@ -29,9 +29,6 @@ import com.cuit.likedu.ui.presenter.SubRankPresenter;
 
 /**
  * 二级排行榜
- *
- * @author yuyh.
- * @date 16/9/1.
  */
 public class SubRankFragment extends BaseRVFragment<SubRankPresenter, BooksByCats.BooksBean> implements SubRankContract.View {
 

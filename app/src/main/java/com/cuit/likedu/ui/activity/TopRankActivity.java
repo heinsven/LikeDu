@@ -1,18 +1,3 @@
-/**
- * Copyright 2016 JustWayward Team
- * <p>
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * <p>
- * http://www.apache.org/licenses/LICENSE-2.0
- * <p>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package com.cuit.likedu.ui.activity;
 
 import android.content.Context;
@@ -116,10 +101,6 @@ public class TopRankActivity extends BaseActivity implements TopRankContract.Vie
                 maleChilds.add(new ArrayList<RankingList.MaleBean>());
             }
         }
-        if (collapse.size() > 0) {
-            maleGroups.add(new RankingList.MaleBean("别人家的排行榜"));
-            maleChilds.add(collapse);
-        }
         maleAdapter.notifyDataSetChanged();
     }
 
@@ -133,10 +114,6 @@ public class TopRankActivity extends BaseActivity implements TopRankContract.Vie
                 femaleGroups.add(bean);
                 femaleChilds.add(new ArrayList<RankingList.MaleBean>());
             }
-        }
-        if (collapse.size() > 0) {
-            femaleGroups.add(new RankingList.MaleBean("别人家的排行榜"));
-            femaleChilds.add(collapse);
         }
         femaleAdapter.notifyDataSetChanged();
     }
@@ -156,7 +133,6 @@ public class TopRankActivity extends BaseActivity implements TopRankContract.Vie
         @Override
         public void onItemClick(View view, int position, RankingList.MaleBean data) {
             if (data.monthRank == null) {
-                SubOtherHomeRankActivity.startActivity(mContext, data._id, data.title);
             } else {
                 SubRankActivity.startActivity(mContext, data._id, data.monthRank, data.totalRank, data.title);
             }

@@ -32,17 +32,14 @@ import com.cuit.likedu.R;
 import com.cuit.likedu.base.BaseActivity;
 import com.cuit.likedu.base.Constant;
 import com.cuit.likedu.bean.BookDetail;
-import com.cuit.likedu.bean.BookLists;
 import com.cuit.likedu.bean.HotReview;
 import com.cuit.likedu.bean.Recommend;
-import com.cuit.likedu.bean.RecommendBookList;
 import com.cuit.likedu.bean.support.RefreshCollectionIconEvent;
 import com.cuit.likedu.common.OnRvItemClickListener;
 import com.cuit.likedu.component.AppComponent;
 import com.cuit.likedu.component.DaggerBookComponent;
 import com.cuit.likedu.manager.CollectionsManager;
 import com.cuit.likedu.ui.adapter.HotReviewAdapter;
-import com.cuit.likedu.ui.adapter.RecommendBookListAdapter;
 import com.cuit.likedu.ui.contract.BookDetailContract;
 import com.cuit.likedu.ui.presenter.BookDetailPresenter;
 import com.cuit.likedu.utils.FormatUtils;
@@ -64,9 +61,6 @@ import javax.inject.Inject;
 import butterknife.Bind;
 import butterknife.OnClick;
 
-/**
- * Created by lfh on 2016/8/6.
- */
 public class BookDetailActivity extends BaseActivity implements BookDetailContract.View, OnRvItemClickListener<Object> {
 
     public static String INTENT_BOOK_ID = "bookId";
@@ -126,8 +120,6 @@ public class BookDetailActivity extends BaseActivity implements BookDetailContra
 
     private HotReviewAdapter mHotReviewAdapter;
     private List<HotReview.Reviews> mHotReviewList = new ArrayList<>();
-    private RecommendBookListAdapter mRecommendBookListAdapter;
-    private List<RecommendBookList.RecommendBook> mRecommendBookList = new ArrayList<>();
     private String bookId;
 
     private boolean collapseLongIntro = true;
@@ -168,8 +160,6 @@ public class BookDetailActivity extends BaseActivity implements BookDetailContra
 
         mRvRecommendBoookList.setHasFixedSize(true);
         mRvRecommendBoookList.setLayoutManager(new LinearLayoutManager(this));
-        mRecommendBookListAdapter = new RecommendBookListAdapter(mContext, mRecommendBookList, this);
-        mRvRecommendBoookList.setAdapter(mRecommendBookListAdapter);
 
         mTagGroup.setOnTagClickListener(new TagGroup.OnTagClickListener() {
             @Override
@@ -182,7 +172,6 @@ public class BookDetailActivity extends BaseActivity implements BookDetailContra
         mPresenter.attachView(this);
         mPresenter.getBookDetail(bookId);
         mPresenter.getHotReview(bookId);
-        mPresenter.getRecommendBookList(bookId, "3");
     }
 
     @Override
@@ -271,33 +260,9 @@ public class BookDetailActivity extends BaseActivity implements BookDetailContra
     }
 
     @Override
-    public void showRecommendBookList(List<RecommendBookList.RecommendBook> list) {
-        if (!list.isEmpty()) {
-            mTvRecommendBookList.setVisibility(View.VISIBLE);
-            mRecommendBookList.clear();
-            mRecommendBookList.addAll(list);
-            mRecommendBookListAdapter.notifyDataSetChanged();
-        }
-    }
-
-    @Override
     public void onItemClick(View view, int position, Object data) {
         if (data instanceof HotReview.Reviews) {
             BookDiscussionDetailActivity.startActivity(this, ((HotReview.Reviews) data)._id);
-        } else if (data instanceof RecommendBookList.RecommendBook) {
-            RecommendBookList.RecommendBook recommendBook = (RecommendBookList.RecommendBook) data;
-
-            BookLists bookLists = new BookLists();
-            BookLists.BookListsBean bookListsBean = bookLists.new BookListsBean();
-            bookListsBean._id = recommendBook.id;
-            bookListsBean.author = recommendBook.author;
-            bookListsBean.bookCount = recommendBook.bookCount;
-            bookListsBean.collectorCount = recommendBook.collectorCount;
-            bookListsBean.cover = recommendBook.cover;
-            bookListsBean.desc = recommendBook.desc;
-            bookListsBean.title = recommendBook.title;
-
-            SubjectBookListDetailActivity.startActivity(this, bookListsBean);
         }
     }
 

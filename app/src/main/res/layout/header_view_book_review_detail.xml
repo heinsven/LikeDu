@@ -168,7 +168,6 @@
             android:src="@drawable/post_detail_more" />
 
         <ImageView
-            android:id="@+id/ivShare"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginRight="10dp"
@@ -177,7 +176,6 @@
     </RelativeLayout>
 
     <TextView
-        android:id="@+id/tvToReviewTheScoring"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/common_gray_bg"
@@ -207,7 +205,6 @@
                 tools:text="6" />
 
             <TextView
-                android:id="@+id/tvHelpfullYes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/review_useful_yes_nor"
@@ -232,7 +229,6 @@
                 tools:text="0" />
 
             <TextView
-                android:id="@+id/tvHelpfullNo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableLeft="@drawable/review_useful_no_nor"

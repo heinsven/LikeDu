@@ -1,29 +1,3 @@
-/**
- * Copyright (c) 2016, smuyyh@gmail.com All Rights Reserved.
- * #                                                   #
- * #                       _oo0oo_                     #
- * #                      o8888888o                    #
- * #                      88" . "88                    #
- * #                      (| -_- |)                    #
- * #                      0\  =  /0                    #
- * #                    ___/`---'\___                  #
- * #                  .' \\|     |# '.                 #
- * #                 / \\|||  :  |||# \                #
- * #                / _||||| -:- |||||- \              #
- * #               |   | \\\  -  #/ |   |              #
- * #               | \_|  ''\---/''  |_/ |             #
- * #               \  .-\__  '-'  ___/-. /             #
- * #             ___'. .'  /--.--\  `. .'___           #
- * #          ."" '<  `.___\_<|>_/___.' >' "".         #
- * #         | | :  `- \`.;`\ _ /`;.`/ - ` : | |       #
- * #         \  \ `_.   \_ __\ /__ _/   .-` /  /       #
- * #     =====`-.____`.___ \_____/___.-`___.-'=====    #
- * #                       `=---='                     #
- * #     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~   #
- * #                                                   #
- * #               佛祖保佑         永无BUG             #
- * #                                                   #
- */
 package com.cuit.likedu.ui.activity;
 
 import android.content.Intent;
@@ -37,13 +11,10 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
 
-import com.google.gson.Gson;
 import com.cuit.likedu.R;
 import com.cuit.likedu.base.BaseActivity;
 import com.cuit.likedu.base.Constant;
-import com.cuit.likedu.bean.user.TencentLoginResult;
 import com.cuit.likedu.component.AppComponent;
 import com.cuit.likedu.component.DaggerMainComponent;
 import com.cuit.likedu.manager.EventManager;
@@ -54,18 +25,11 @@ import com.cuit.likedu.ui.fragment.CommunityFragment;
 import com.cuit.likedu.ui.fragment.FindFragment;
 import com.cuit.likedu.ui.fragment.RecommendFragment;
 import com.cuit.likedu.ui.presenter.MainActivityPresenter;
-import com.cuit.likedu.utils.LogUtils;
 import com.cuit.likedu.utils.SharedPreferencesUtil;
 import com.cuit.likedu.utils.ToastUtils;
 import com.cuit.likedu.view.GenderPopupWindow;
-import com.cuit.likedu.view.LoginPopupWindow;
 import com.cuit.likedu.view.RVPIndicator;
 import com.tencent.connect.common.Constants;
-import com.tencent.tauth.IUiListener;
-import com.tencent.tauth.Tencent;
-import com.tencent.tauth.UiError;
-
-import org.json.JSONObject;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -76,10 +40,7 @@ import javax.inject.Inject;
 
 import butterknife.Bind;
 
-/**
- * https://github.com/JustWayward/BookReader
- */
-public class MainActivity extends BaseActivity implements MainContract.View, LoginPopupWindow.LoginTypeListener {
+public class MainActivity extends BaseActivity implements MainContract.View {
 
     @Bind(R.id.indicator)
     RVPIndicator mIndicator;
@@ -98,9 +59,6 @@ public class MainActivity extends BaseActivity implements MainContract.View, Log
     // 退出间隔
     private static final int BACK_PRESSED_INTERVAL = 2000;
 
-    private LoginPopupWindow popupWindow;
-    public static Tencent mTencent;
-    public IUiListener loginListener;
     private GenderPopupWindow genderPopupWindow;
 
     @Override
@@ -129,8 +87,6 @@ public class MainActivity extends BaseActivity implements MainContract.View, Log
     @Override
     public void initDatas() {
         startService(new Intent(this, DownloadBookService.class));
-
-        mTencent = Tencent.createInstance("1105670298", MainActivity.this);
 
         mDatas = Arrays.asList(getResources().getStringArray(R.array.home_tabs));
         mTabContents = new ArrayList<>();
@@ -203,18 +159,8 @@ public class MainActivity extends BaseActivity implements MainContract.View, Log
                 startActivity(new Intent(MainActivity.this, SearchActivity.class));
                 break;
             case R.id.action_login:
-                if (popupWindow == null) {
-                    popupWindow = new LoginPopupWindow(this);
-                    popupWindow.setLoginTypeListener(this);
-                }
-                popupWindow.showAtLocation(mCommonToolbar, Gravity.CENTER, 0, 0);
                 break;
             case R.id.action_my_message:
-                if (popupWindow == null) {
-                    popupWindow = new LoginPopupWindow(this);
-                    popupWindow.setLoginTypeListener(this);
-                }
-                popupWindow.showAtLocation(mCommonToolbar, Gravity.CENTER, 0, 0);
                 break;
             case R.id.action_sync_bookshelf:
                 showDialog();
@@ -305,17 +251,6 @@ public class MainActivity extends BaseActivity implements MainContract.View, Log
     }
 
     @Override
-    public void onLogin(ImageView view, String type) {
-        if (type.equals("QQ")) {
-            if (!mTencent.isSessionValid()) {
-                if (loginListener == null) loginListener = new BaseUIListener();
-                mTencent.login(this, "all", loginListener);
-            }
-        }
-        //4f45e920ff5d1a0e29d997986cd97181
-    }
-
-    @Override
     public void showError() {
         ToastUtils.showSingleToast("同步异常");
         dismissDialog();
@@ -327,32 +262,9 @@ public class MainActivity extends BaseActivity implements MainContract.View, Log
     }
 
 
-    public class BaseUIListener implements IUiListener {
-
-        @Override
-        public void onComplete(Object o) {
-            JSONObject jsonObject = (JSONObject) o;
-            String json = jsonObject.toString();
-            Gson gson = new Gson();
-            TencentLoginResult result = gson.fromJson(json, TencentLoginResult.class);
-            LogUtils.e(result.toString());
-            mPresenter.login(result.openid, result.access_token, "QQ");
-        }
-
-        @Override
-        public void onError(UiError uiError) {
-        }
-
-        @Override
-        public void onCancel() {
-
-        }
-    }
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == Constants.REQUEST_LOGIN || requestCode == Constants.REQUEST_APPBAR) {
-            Tencent.onActivityResultData(requestCode, resultCode, data, loginListener);
         }
         super.onActivityResult(requestCode, resultCode, data);
     }

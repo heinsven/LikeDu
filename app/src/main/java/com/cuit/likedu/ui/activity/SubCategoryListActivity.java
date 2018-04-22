@@ -49,10 +49,6 @@ import javax.inject.Inject;
 
 import butterknife.Bind;
 
-/**
- * @author yuyh.
- * @date 2016/8/31.
- */
 public class SubCategoryListActivity extends BaseActivity implements SubCategoryActivityContract.View {
 
     public static final String INTENT_CATE_NAME = "name";

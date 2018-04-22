@@ -35,9 +35,6 @@ import org.greenrobot.eventbus.ThreadMode;
 
 /**
  * 二级分类
- *
- * @author yuyh.
- * @date 16/9/1.
  */
 public class SubCategoryFragment extends BaseRVFragment<SubCategoryFragmentPresenter, BooksByCats.BooksBean> implements SubCategoryFragmentContract.View {
 

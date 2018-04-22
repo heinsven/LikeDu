@@ -105,8 +105,6 @@ public class TopRankAdapter extends BaseExpandableListAdapter {
                     }
                 }
             });
-        } else {
-            ivCover.setImageResource(R.drawable.ic_rank_collapse);
         }
 
         TextView tvName = (TextView) group.findViewById(R.id.tvRankGroupName);

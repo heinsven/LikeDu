@@ -34,12 +34,6 @@
         <item>总榜</item>
     </string-array>
 
-    <string-array name="subject_tabs">
-        <item>本周最热</item>
-        <item>最新发布</item>
-        <item>最多收藏</item>
-    </string-array>
-
     <string-array name="bookdetail_community_tabs">
         <item>讨论</item>
         <item>书评</item>
@@ -58,16 +52,6 @@
         <item>置顶</item>
         <item>删除</item>
         <item>批量管理</item>
-    </string-array>
-
-    <string-array name="recommend_item_long_click_choice_recommend">
-        <item>书籍详情</item>
-        <item>删除</item>
-        <item>缓存全本</item>
-    </string-array>
-
-    <string-array name="my_book_list_item_long_click_choice">
-        <item>删除</item>
     </string-array>
 
     <string-array name="setting_dialog_sort_choice">
