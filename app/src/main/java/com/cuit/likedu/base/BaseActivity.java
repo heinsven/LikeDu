@@ -1,6 +1,5 @@
 package com.cuit.likedu.base;
 
-import android.annotation.TargetApi;
 import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
@@ -60,13 +59,6 @@ public abstract class BaseActivity extends AppCompatActivity {
                 && Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
             //透明状态栏
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        }
-    }
-
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    private void toolbarSetElevation(float elevation) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            mCommonToolbar.setElevation(elevation);
         }
     }
 

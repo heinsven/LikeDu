@@ -10,8 +10,6 @@ import android.text.TextUtils;
 import com.cuit.likedu.R;
 import com.cuit.likedu.ReaderApplication;
 import com.cuit.likedu.api.BookApi;
-import com.cuit.likedu.api.support.Logger;
-import com.cuit.likedu.api.support.LoggingInterceptor;
 import com.cuit.likedu.bean.BookMixAToc;
 import com.cuit.likedu.bean.ChapterRead;
 import com.cuit.likedu.bean.support.DownloadMessage;
@@ -50,8 +48,6 @@ public class DownloadBookService extends Service {
     public void onCreate() {
         super.onCreate();
         EventBus.getDefault().register(this);
-        LoggingInterceptor logging = new LoggingInterceptor(new Logger());
-        logging.setLevel(LoggingInterceptor.Level.BODY);
         bookApi = ReaderApplication.getsInstance().getAppComponent().getReaderApi();
     }
 

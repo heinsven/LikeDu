@@ -24,18 +24,12 @@ import butterknife.Bind;
 
 public class TopRankActivity extends BaseActivity implements TopRankContract.View {
 
-    @Bind(R.id.elvFeMale)
-    ExpandableListView elvFeMale;
     @Bind(R.id.elvMale)
     ExpandableListView elvMale;
 
     private List<RankingList.MaleBean> maleGroups = new ArrayList<>();
     private List<List<RankingList.MaleBean>> maleChilds = new ArrayList<>();
     private TopRankAdapter maleAdapter;
-
-    private List<RankingList.MaleBean> femaleGroups = new ArrayList<>();
-    private List<List<RankingList.MaleBean>> femaleChilds = new ArrayList<>();
-    private TopRankAdapter femaleAdapter;
 
     @Inject
     TopRankPresenter mPresenter;
@@ -67,16 +61,13 @@ public class TopRankActivity extends BaseActivity implements TopRankContract.Vie
     @Override
     public void initDatas() {
         maleAdapter = new TopRankAdapter(this, maleGroups, maleChilds);
-        femaleAdapter = new TopRankAdapter(this, femaleGroups, femaleChilds);
         maleAdapter.setItemClickListener(new ClickListener());
-        femaleAdapter.setItemClickListener(new ClickListener());
     }
 
     @Override
     public void configViews() {
         showDialog();
         elvMale.setAdapter(maleAdapter);
-        elvFeMale.setAdapter(femaleAdapter);
 
         mPresenter.attachView(this);
         mPresenter.getRankList();
@@ -85,9 +76,7 @@ public class TopRankActivity extends BaseActivity implements TopRankContract.Vie
     @Override
     public void showRankList(RankingList rankingList) {
         maleGroups.clear();
-        femaleGroups.clear();
         updateMale(rankingList);
-        updateFemale(rankingList);
     }
 
     private void updateMale(RankingList rankingList) {
@@ -104,20 +93,6 @@ public class TopRankActivity extends BaseActivity implements TopRankContract.Vie
         maleAdapter.notifyDataSetChanged();
     }
 
-    private void updateFemale(RankingList rankingList) {
-        List<RankingList.MaleBean> list = rankingList.female;
-        List<RankingList.MaleBean> collapse = new ArrayList<>();
-        for (RankingList.MaleBean bean : list) {
-            if (bean.collapse) { // 折叠
-                collapse.add(bean);
-            } else {
-                femaleGroups.add(bean);
-                femaleChilds.add(new ArrayList<RankingList.MaleBean>());
-            }
-        }
-        femaleAdapter.notifyDataSetChanged();
-    }
-
     @Override
     public void showError() {
 
@@ -132,10 +107,7 @@ public class TopRankActivity extends BaseActivity implements TopRankContract.Vie
 
         @Override
         public void onItemClick(View view, int position, RankingList.MaleBean data) {
-            if (data.monthRank == null) {
-            } else {
-                SubRankActivity.startActivity(mContext, data._id, data.monthRank, data.totalRank, data.title);
-            }
+            SubRankActivity.startActivity(mContext, data._id, data.monthRank, data.totalRank, data.title);
         }
     }
 
